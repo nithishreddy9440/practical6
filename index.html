@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Student Result Management System</h1>
+        <p>Enter student details and examination marks</p>
+    </header>
+
+    <section class="form-section">
+
+        <h2>Student Result Entry</h2>
+
+        <form id="resultForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId"
+                           placeholder="Enter Student ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName"
+                           placeholder="Enter Student Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option value="">Select Department</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="ME">ME</option>
+                        <option value="CE">CE</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <select id="semester">
+                        <option value="">Select Semester</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                        <option value="V">V</option>
+                        <option value="VI">VI</option>
+                        <option value="VII">VII</option>
+                        <option value="VIII">VIII</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject1">Web Technologies</label>
+                    <input type="number" id="subject1"
+                           min="0" max="100"
+                           placeholder="Marks out of 100">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject2">Database Management</label>
+                    <input type="number" id="subject2"
+                           min="0" max="100"
+                           placeholder="Marks out of 100">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject3">Java Programming</label>
+                    <input type="number" id="subject3"
+                           min="0" max="100"
+                           placeholder="Marks out of 100">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject4">Computer Networks</label>
+                    <input type="number" id="subject4"
+                           min="0" max="100"
+                           placeholder="Marks out of 100">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject5">Operating Systems</label>
+                    <input type="number" id="subject5"
+                           min="0" max="100"
+                           placeholder="Marks out of 100">
+                </div>
+
+            </div>
+
+            <div id="errorMessage" class="error"></div>
+
+            <div class="buttons">
+                <button type="submit" class="btn calculate">
+                    Calculate Result
+                </button>
+
+                <button type="reset" class="btn clear">
+                    Clear Form
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+
+    <section class="result-section">
+
+        <h2>Student Results</h2>
+
+        <div class="table-container">
+
+            <table id="resultTable">
+
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Total</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resultBody">
+                    <tr id="noData">
+                        <td colspan="7">
+                            No student results available
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
